@@ -56,6 +56,9 @@ export PATH=$SBIN:$GEM_HOME/bin:$HOME/bin:/usr/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
+# want your terminal to support 256 color schemes? I do ...
+export TERM="xterm-256color"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
