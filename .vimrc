@@ -183,3 +183,5 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['tex', 'c', 'scss', 'html', 'scala'] }
 
+" For markdown
+let g:vim_markdown_folding_disabled=1
