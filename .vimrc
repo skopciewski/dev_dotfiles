@@ -13,7 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
-"Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 
 Plugin 'kien/ctrlp.vim'
@@ -124,6 +124,10 @@ map <Leader>/ :nohlsearch<cr>
 " For color sheme
 syntax enable
 colorscheme molokai
+let g:solarized_termcolors=256
+"set background=dark
+"colorscheme solarized
+" basic display
 set cursorline
 set cc=+15
 set number
@@ -163,6 +167,7 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_theme='solarized'
 
 " For DeleteTrailingWhitespace
 autocmd FileType c,cpp,java,php,ruby,python,haml,sass,html,css,javascript autocmd BufWritePre <buffer> :DeleteTrailingWhitespace
