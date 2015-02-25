@@ -45,7 +45,8 @@ Plugin 'vim-scripts/YankRing.vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'pangloss/vim-javascript'
 Plugin 'christoomey/vim-tmux-navigator'
-
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -185,3 +186,15 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 " For markdown
 let g:vim_markdown_folding_disabled=1
+
+" For Tslime
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
+
+" For rspec
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
