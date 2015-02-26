@@ -38,7 +38,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'slim-template/vim-slim'
 Plugin 'mattn/gist-vim'
 Plugin 'bling/vim-airline'
-"Plugin 'tomtom/quickfixsigns_vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/DeleteTrailingWhitespace'
@@ -201,3 +200,10 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+" For gitgutter
+highlight GitGutterAdd ctermbg=darkgreen ctermfg=black
+highlight GitGutterChange ctermbg=darkyellow ctermfg=black
+highlight GitGutterDelete ctermbg=darkred ctermfg=black
+highlight GitGutterChangeDelete ctermbg=gray ctermfg=black
+let g:gitgutter_sign_removed = '-'
