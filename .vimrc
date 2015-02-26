@@ -68,6 +68,7 @@ filetype plugin indent on    " required
 set term=screen-256color
 let mapleader=","
 let localmapleader=","
+set updatetime=1000
 " up/down on displayed lines, not real lines. More useful than painful.
 noremap k gk
 noremap j gj
