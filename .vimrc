@@ -171,6 +171,7 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_theme='solarized'
+let g:airline#extensions#hunks#enabled = 0
 
 " For DeleteTrailingWhitespace
 autocmd FileType c,cpp,java,php,ruby,python,haml,sass,html,css,javascript autocmd BufWritePre <buffer> :DeleteTrailingWhitespace
