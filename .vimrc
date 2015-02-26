@@ -83,6 +83,7 @@ set diffopt=filler,iwhite   " In diff mode, ignore whitespace changes and align 
 set history=1000                " Remember 1000 commands
 set scrolloff=3                 " Start scrolling 3 lines before the horizontal window border
 set visualbell t_vb=            " Disable error bells
+set shortmess+=A
 " Tabs, spaces
 set autoindent
 set smarttab       " Make <tab> and <backspace> smarter
@@ -114,7 +115,7 @@ if has("persistent_undo")
   set undofile
 endif
 " After 4s of inactivity, check for external file modifications on next keyrpress
-au CursorHold * checktime
+au CursorMoved * checktime
 " Paste
 set pastetoggle=<F10>
 " Write file when you forget to use sudo
