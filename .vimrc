@@ -116,7 +116,7 @@ if has("persistent_undo")
   set undofile
 endif
 " After 4s of inactivity, check for external file modifications on next keyrpress
-au CursorMoved * checktime
+au CursorHold,WinEnter,TabEnter * checktime
 " Paste
 set pastetoggle=<F10>
 " Write file when you forget to use sudo
