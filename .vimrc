@@ -148,7 +148,7 @@ let g:ctrlp_custom_ignore = '/\.\|\.o\|\.so'
 let g:ctrlp_switch_buffer = 0
 
 " For ACK
-nnoremap <Leader>a :Ack
+nnoremap <Leader>g :Ack
 
 " For NERDTree
 nnoremap <C-g> :NERDTreeToggle<cr>

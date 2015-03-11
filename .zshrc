@@ -45,7 +45,7 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker gem git-flow vi-mode tmuxinator)
+plugins=(git docker gem git-flow vi-mode tmux tmuxinator)
 
 # User configuration
 
@@ -54,10 +54,16 @@ SBIN="$HOME/sbin:$HOME/.skrypt"
 export PATH=$SBIN:$GEM_HOME/bin:$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
-
 # want your terminal to support 256 color schemes? I do ...
 export TERM="xterm-256color"
+
+# Autostart tmux
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=true
+ZSH_TMUX_AUTOCONNECT=false
+ZSH_TMUX_FIXTER=false
+
+source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,3 +89,4 @@ export TERM="xterm-256color"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
