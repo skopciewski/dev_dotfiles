@@ -48,11 +48,15 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/tslime.vim'
 
+Plugin 'StanAngeloff/php.vim'
+Plugin '2072/PHP-Indenting-for-VIm'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+" filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -69,10 +73,6 @@ set term=screen-256color
 let mapleader=","
 let localmapleader=","
 set updatetime=1000
-" up/down on displayed lines, not real lines. More useful than painful.
-noremap k gk
-noremap j gj
-" other
 set hidden                      " Don't abandon buffers moved to the background
 set wildmenu                    " Enhanced completion hints in command line
 set wildmode=list:longest,full " Complete longest common match and show possible matches
@@ -86,13 +86,20 @@ set scrolloff=3                 " Start scrolling 3 lines before the horizontal 
 set visualbell t_vb=            " Disable error bells
 set shortmess+=A
 " Tabs, spaces
-set autoindent
-set smarttab       " Make <tab> and <backspace> smarter
-set expandtab
-set tabstop=2
 set shiftwidth=2
+set softtabstop=2
+set autoindent
+set expandtab
+set smarttab       " Make <tab> and <backspace> smarter
 set textwidth=80
 set formatoptions-=t formatoptions+=croql
+autocmd Filetype php,javascript setlocal ts=4 sts=4 sw=4
+" basic display
+set cursorline
+set cc=+15
+set number
+set list!    " Display unprintable characters
+set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 " Search settings
 set ignorecase
 set smartcase
@@ -123,19 +130,16 @@ set pastetoggle=<F10>
 cmap w!! w !sudo tee % >/dev/null
 " Other
 map <Leader>/ :nohlsearch<cr>
+" up/down on displayed lines, not real lines. More useful than painful.
+noremap k gk
+noremap j gj
 
 " For color sheme
-syntax enable
+"syntax enable
 colorscheme molokai
 let g:solarized_termcolors=256
 "set background=dark
 "colorscheme solarized
-" basic display
-set cursorline
-set cc=+15
-set number
-set list!    " Display unprintable characters
-set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 if $TERM =~ '256color'
    set t_Co=256
 elseif $TERM =~ '^xterm$'
