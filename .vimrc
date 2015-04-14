@@ -49,7 +49,6 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/tslime.vim'
 
 Plugin 'StanAngeloff/php.vim'
-Plugin '2072/PHP-Indenting-for-VIm'
 
 
 " All of your Plugins must be added before the following line
@@ -70,6 +69,11 @@ filetype plugin indent on    " required
 
 " Global configs
 set term=screen-256color
+if $TERM =~ '256color'
+   set t_Co=256
+elseif $TERM =~ '^xterm$'
+  set t_Co=256
+endif
 let mapleader=","
 let localmapleader=","
 set updatetime=1000
@@ -140,11 +144,6 @@ colorscheme molokai
 let g:solarized_termcolors=256
 "set background=dark
 "colorscheme solarized
-if $TERM =~ '256color'
-   set t_Co=256
-elseif $TERM =~ '^xterm$'
-  set t_Co=256
-endif
 
 " For CtrlP
 let g:ctrlp_map = '<Leader>.'
@@ -190,6 +189,9 @@ let g:syntastic_enable_signs=1
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['tex', 'c', 'scss', 'html', 'scala'] }
+
+" For commentary
+autocmd FileType php set commentstring=//\ %s
 
 " For markdown
 let g:vim_markdown_folding_disabled=1
