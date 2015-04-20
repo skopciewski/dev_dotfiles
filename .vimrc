@@ -47,7 +47,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/tslime.vim'
-
+Plugin 'vimwiki/vimwiki'
 Plugin 'StanAngeloff/php.vim'
 
 
@@ -98,6 +98,7 @@ set smarttab       " Make <tab> and <backspace> smarter
 set textwidth=80
 set formatoptions-=t formatoptions+=croql
 autocmd Filetype php,javascript setlocal ts=4 sts=4 sw=4
+autocmd Filetype make setlocal ts=8 sts=8 sw=8
 " basic display
 set cursorline
 set cc=+15
@@ -139,7 +140,7 @@ noremap k gk
 noremap j gj
 
 " For color sheme
-"syntax enable
+syntax enable
 colorscheme molokai
 let g:solarized_termcolors=256
 "set background=dark
@@ -214,3 +215,7 @@ highlight GitGutterChange ctermbg=darkyellow ctermfg=black
 highlight GitGutterDelete ctermbg=darkred ctermfg=black
 highlight GitGutterChangeDelete ctermbg=gray ctermfg=black
 let g:gitgutter_sign_removed = '-'
+
+" For vimwiki
+let g:vimwiki_list = [{'path': '~/personal/docs/vimwiki/',
+                      \ 'path_html': '~/personal/docs/vimwiki/html_site/'}]
