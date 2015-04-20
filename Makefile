@@ -7,11 +7,12 @@ VIM_BUNDLE := $(VIM_DIR)/bundle
 TODO_BIN := $(HOME)/sbin/todo.sh
 TODO_CONF_DIR := $(HOME)/.todo
 TODO_ACTIONS_DIR := $(HOME)/.todo.actions.d
+WHEN_CONF_DIR := $(HOME)/.when
 
 $(HOME)/%: %
 	ln -fs $(PWD)/$< $@
 
-all: prepare_zsh prepare_tmux prepare_vim prepare_todo
+all: prepare_zsh prepare_tmux prepare_vim prepare_todo prepare_when
 
 prepare_zsh: $(ZSH_CONFIG) $(OH_MY_ZSH_DIR)
 
@@ -43,3 +44,10 @@ $(TODO_CONF_DIR):
 $(TODO_ACTIONS_DIR):
 	mkdir -p $(TODO_ACTIONS_DIR)
 	ln -s $(PWD)/todotxt/actions/add $(TODO_ACTIONS_DIR)/add
+
+prepare_when: $(WHEN_CONF_DIR)
+
+$(WHEN_CONF_DIR):
+	mkdir -p $(WHEN_CONF_DIR)
+	ln -s $(PWD)/when/preferences $(WHEN_CONF_DIR)/preferences
+
