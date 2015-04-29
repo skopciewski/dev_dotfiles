@@ -186,6 +186,7 @@ let g:yankring_history_dir = '$HOME/.vim'
 let g:yankring_manual_clipboard_check = 0
 
 " For Syntastic
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_enable_signs=1
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
