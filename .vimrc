@@ -97,14 +97,16 @@ set expandtab
 set smarttab       " Make <tab> and <backspace> smarter
 set textwidth=80
 set formatoptions-=t formatoptions+=croql
-autocmd Filetype php,javascript setlocal ts=4 sts=4 sw=4
-autocmd Filetype make setlocal ts=8 sts=8 sw=8
 " basic display
 set cursorline
 set cc=+15
 set number
-set list!    " Display unprintable characters
+set list    " Display unprintable characters
 set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
+" Local settings
+autocmd Filetype php,javascript setlocal ts=4 sts=4 sw=4
+autocmd Filetype make setlocal ts=8 sts=8 sw=8
+autocmd Filetype mkd setlocal cc=+0
 " Search settings
 set ignorecase
 set smartcase
