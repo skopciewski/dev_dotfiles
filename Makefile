@@ -30,9 +30,9 @@ prepare_vim: $(VIM_CONFIG) $(VIM_BUNDLE)
 
 $(VIM_BUNDLE): | $(VIM_DIR)
 	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	sed -i -e '/^colorscheme/s/.*/"\\1/' $(VIM_CONFIG)
-	vim +VundleInstall +qall
-	sed -i -e '/^"colorscheme/s/"//' $(VIM_CONFIG)
+	sed -e '/^colorscheme/s/.*/"\\1/' $(VIM_CONFIG) > /tmp/vimrc
+	vim -u /tmp/vimrc  +VundleInstall +qall
+	rm /tmp/vimrc
 
 $(VIM_DIR):
 	mkdir -p $(VIM_DIR)/swap
