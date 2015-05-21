@@ -8,7 +8,9 @@ VIM_CONFIG := $(HOME)/.vimrc
 VIM_DIR := $(HOME)/.vim
 VIM_BUNDLE := $(VIM_DIR)/bundle
 
-all: prepare_zsh prepare_tmux prepare_vim 
+GIT_CONFIG := $(HOME)/.gitconfig
+
+all: prepare_zsh prepare_tmux prepare_vim prepare_gitconfig
 
 $(HOME)/%: %
 	ln -fs $(PWD)/$< $@
@@ -37,3 +39,6 @@ $(VIM_BUNDLE): | $(VIM_DIR)
 $(VIM_DIR):
 	mkdir -p $(VIM_DIR)/swap
 	mkdir -p $(VIM_DIR)/undo
+
+# for git
+prepare_gitconfig: $(GIT_CONFIG)
