@@ -47,40 +47,23 @@ ZSH_THEME="gentoo"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker gem git-flow vi-mode tmux tmuxinator)
 
-# User configuration
-
-GEM_HOME=`gem env home`
-SBIN="$HOME/sbin:$HOME/.skrypt"
-export PATH=$SBIN:$GEM_HOME/bin:$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # want your terminal to support 256 color schemes? I do ...
 export TERM="xterm-256color"
 
-# Autostart tmux
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOSTART_ONCE=true
-ZSH_TMUX_AUTOCONNECT=false
-ZSH_TMUX_AUTOQUIT=false
-ZSH_TMUX_FIXTER=false
+# Load local config
+source .zshrc_local
 
+# Start oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# line search
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -90,6 +73,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias t='todo.sh -d ~/.todo/config'
-alias ww='vim -c VimwikiIndex'

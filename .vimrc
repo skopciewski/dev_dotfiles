@@ -180,7 +180,7 @@ let g:airline_theme='solarized'
 let g:airline#extensions#hunks#enabled = 0
 
 " For DeleteTrailingWhitespace
-autocmd FileType c,cpp,java,php,ruby,python,haml,sass,html,css,javascript autocmd BufWritePre <buffer> :DeleteTrailingWhitespace
+autocmd FileType c,cpp,java,php,ruby,python,haml,sass,html,css,javascript,yaml autocmd BufWritePre <buffer> :DeleteTrailingWhitespace
 
 " For YankRing
 nnoremap <C-y> :YRShow<cr>

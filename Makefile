@@ -1,5 +1,6 @@
 OH_MY_ZSH_DIR := $(HOME)/.oh-my-zsh
 ZSH_CONFIG := $(HOME)/.zshrc
+ZSH_CONFIG_LOCAL := $(HOME)/.zshrc_local
 
 TMUX_CONFIG := $(HOME)/.tmux.conf
 
@@ -13,7 +14,10 @@ $(HOME)/%: %
 	ln -fs $(PWD)/$< $@
 
 # for zsh
-prepare_zsh: $(ZSH_CONFIG) $(OH_MY_ZSH_DIR)
+prepare_zsh: $(ZSH_CONFIG) $(ZSH_CONFIG_LOCAL) $(OH_MY_ZSH_DIR)
+
+$(ZSH_CONFIG_LOCAL):
+	touch $(ZSH_CONFIG_LOCAL)
 
 $(OH_MY_ZSH_DIR):
 	git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
