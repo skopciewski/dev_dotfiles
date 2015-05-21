@@ -53,7 +53,7 @@ plugins=(git docker gem git-flow vi-mode tmux tmuxinator)
 export TERM="xterm-256color"
 
 # Load local config
-source .zshrc_local
+source $HOME/.zshrc_local
 
 # Start oh-my-zsh
 source $ZSH/oh-my-zsh.sh
