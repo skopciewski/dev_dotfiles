@@ -50,7 +50,8 @@ plugins=(git docker gem git-flow vi-mode tmux tmuxinator)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # want your terminal to support 256 color schemes? I do ...
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
+[ -z "$TMUX" ] && export TERM=xterm-256color
 
 # Load local config
 source $HOME/.zshrc_local
