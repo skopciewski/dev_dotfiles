@@ -68,12 +68,12 @@ filetype plugin indent on    " required
 
 
 " Global configs
-set term=screen-256color
-if $TERM =~ '256color'
-   set t_Co=256
-elseif $TERM =~ '^xterm$'
-  set t_Co=256
-endif
+" set term=screen-256color
+" if $TERM =~ '256color'
+"    set t_Co=256
+" elseif $TERM =~ '^xterm$'
+"   set t_Co=256
+" endif
 let mapleader=","
 let localmapleader=","
 set updatetime=1000
