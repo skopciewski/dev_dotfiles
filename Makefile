@@ -10,7 +10,9 @@ VIM_BUNDLE := $(VIM_DIR)/bundle
 
 GIT_CONFIG := $(HOME)/.gitconfig
 
-all: prepare_zsh prepare_tmux prepare_vim prepare_gitconfig
+RUBOCOP_CONFIG := $(HOME)/.rubocop.yml
+
+all: prepare_zsh prepare_tmux prepare_vim prepare_gitconfig prepare_rubocop
 
 $(HOME)/%: %
 	ln -fs $(PWD)/$< $@
@@ -42,3 +44,7 @@ $(VIM_DIR):
 
 # for git
 prepare_gitconfig: $(GIT_CONFIG)
+	
+# for rubocop
+prepare_rubocop: $(RUBOCOP_CONFIG)
+
