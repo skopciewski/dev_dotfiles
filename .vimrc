@@ -49,6 +49,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'vimwiki/vimwiki'
 Plugin 'StanAngeloff/php.vim'
+Plugin 'ngmy/vim-rubocop'
 
 
 " All of your Plugins must be added before the following line
