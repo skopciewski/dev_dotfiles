@@ -45,7 +45,7 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker gem git-flow vi-mode tmux tmuxinator)
+plugins=(git docker gem git-flow-avh vi-mode tmux tmuxinator)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
