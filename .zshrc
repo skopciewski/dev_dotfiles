@@ -60,8 +60,8 @@ source $HOME/.zshrc_local
 source $ZSH/oh-my-zsh.sh
 
 # line search
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+bindkey "^[OA" history-beginning-search-backward
+bindkey "^[OB" history-beginning-search-forward
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
