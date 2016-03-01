@@ -25,7 +25,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'kana/vim-textobj-user'
 Plugin 'tek/vim-textobj-ruby'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'gabrielelana/vim-markdown'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/syntastic'
@@ -37,7 +37,8 @@ Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
 Plugin 'slim-template/vim-slim'
 Plugin 'mattn/gist-vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/DeleteTrailingWhitespace'
@@ -198,7 +199,8 @@ let g:syntastic_mode_map = { 'mode': 'active',
 autocmd FileType php set commentstring=//\ %s
 
 " For markdown
-let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_folding_disabled = 1
+let g:markdown_enable_spell_checking = 0
 
 " For Tslime
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
