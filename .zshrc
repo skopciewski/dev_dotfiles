@@ -74,3 +74,10 @@ bindkey "^[OB" history-beginning-search-forward
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# Personal functions
+serve () {
+  serve_port="${1:-3000}"
+  serve_location="${2:-.}"
+  ruby -run -e httpd ${serve_location} -p ${serve_port}
+}
