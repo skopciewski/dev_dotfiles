@@ -14,5 +14,17 @@ Metrics/LineLength:
     - http
     - https
 
+Metrics/MethodLength:
+  Exclude:
+      - test/**/*
+
+Metrics/ModuleLength:
+  Exclude:
+      - test/**/*
+
+Metrics/ClassLength:
+  Exclude:
+      - test/**/*
+
 AllCops:
   TargetRubyVersion: 2.3
